@@ -21,10 +21,10 @@
 
 ## Login [link](https://github.com/Andreii1414/StudentManagementSystem/blob/main/src/main/java/com/example/demo/Controllers/LoginController.java): 
 - /login 
-- JWT:
-       - JwtUtils => generare token (valabil 24h), validare token, extragere email din token 
-       - JwtFilter => eroare 401 daca tokenul e invalid
-       - FilterConfig => specificarea endpoint-urilor care vor fi verificate de filtru
+- JWT: \
+       - JwtUtils => generare token (valabil 24h), validare token, extragere email din token \
+       - JwtFilter => eroare 401 daca tokenul e invalid \
+       - FilterConfig => specificarea endpoint-urilor care vor fi verificate de filtru \
        - [/src/main/java/com/example/demo/Jwt](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/java/com/example/demo/Jwt)
 - salvare token => cookie 
 
