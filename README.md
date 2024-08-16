@@ -9,7 +9,7 @@ Python: [/pythonScripts](https://github.com/Andreii1414/StudentManagementSystem/
 Schema baza de date: [/database.png](https://github.com/Andreii1414/StudentManagementSystem/blob/main/database.png) <br />
 Videoclip de prezentare:
 
-Optiuni: <br />
+## Optiuni: <br />
 	- Register <br />
 	- Login (admin/user) <br />
 	- User panel (top 10 elevi, toti dirigintii, top 5 materii ca nr de absente, elevi cu bursa sociala+merit pe semestrul 2) <br />
