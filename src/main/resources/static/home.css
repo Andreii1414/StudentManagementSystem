@@ -1,0 +1,129 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Comic Sans MS';
+}
+
+body, html{
+	height: 100%;
+}
+
+body{
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:100%;
+}
+
+.container{
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.4);
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    max-height: 100%;
+    min-height: 650px;
+    display: flex;
+}
+
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin:20px 0;
+}
+
+.container button{
+    background-color: rgb(24, 121, 186);
+    color: white;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container button.hidden{
+    background-color: transparent;
+    border-color: white;
+}
+
+.container-left, .container-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container-left {
+    color: black;
+    padding-top: 40px;
+}
+
+.container-left h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.action label {
+    font-size: 18px;
+
+}
+
+.action button {
+    background-color: white;
+    color: blue;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container-right {
+    background-color: rgb(24, 121, 186);
+    color: white;
+    border-radius: 30px;
+}
+
+.container-right h1{
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+.admin-message {
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
+.actions-admin{
+    display: none;
+}

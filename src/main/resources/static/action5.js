@@ -1,0 +1,146 @@
+document.getElementById("action5").onclick = function() {
+    var newWindow = window.open("", "_blank", "width=500,height=550");
+
+    newWindow.document.write(`
+        <html>
+        <head>
+            <title>Adaugare Elev</title>
+            <link rel="stylesheet" href="/forms.css">
+            <style>
+                body { font-family: Arial, sans-serif; padding: 20px; background-color: white; }
+                button{	background-color: rgb(24, 121, 186);
+                       	color: white;
+                       	font-size: 12px;
+                       	padding: 10px 45px;
+                       	border: 1px solid transparent;
+                       	border-radius: 8px;
+                       	font-weight: 600;
+                       	letter-spacing: 0.5px;
+                       	text-transform: uppercase;
+                       	margin-top: 10px;
+                       	cursor: pointer;
+                       	align-self: center;}
+                label { display: block; margin-top: 10px; }
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    max-width: 400px;
+                }
+                input, select { width: 100%; padding: 5px; margin-top: 5px; }
+                #semestru-container { display: none; }
+            </style>
+        </head>
+        <body>
+            <h2>Formular Adaugare Elev</h2>
+            <form>
+                <label for="nume">Nume:</label>
+                <input type="text" id="nume" name="nume" required>
+
+                <label for="prenume">Prenume:</label>
+                <input type="text" id="prenume" name="prenume" required>
+
+                <label for="data_nasterii">Data nasterii (yyyy-mm-dd):</label>
+                <input type="text" id="data_nasterii" name="data_nasterii" required pattern="\\d{4}-\\d{2}-\\d{2}">
+
+                <div id="clasa-container">
+                    <label for="clasa">Clasa:</label>
+                    <select id="clasa" name="clasa">
+
+                    </select>
+                </div>
+
+                <label for="tip_bursa">Tip bursa:</label>
+                <select id="tip_bursa" name="tip_bursa">
+                    <option value="none">Fara bursa</option>
+                </select>
+
+                <div id="semestru-container">
+                    <label for="semestru">Semestru:</label>
+                    <select id="semestru" name="semestru">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+
+                <button type="submit">Adauga Elev</button>
+            </form>
+
+            <script>
+            fetch('/clase')
+                .then(response => response.json())
+                .then(data => {
+                    const clasaSelect = document.getElementById("clasa");
+                    data.forEach(clasa => {
+                        const [id, ...numeParts] = clasa.split(" ");
+                        const nume = numeParts.join(" ");
+                        const option = document.createElement("option");
+                        option.value = id;
+                        option.textContent = nume;
+                        clasaSelect.appendChild(option);
+                    });
+                });
+
+                fetch('/tipBurse')
+                    .then(response => response.json())
+                    .then(data => {
+                        const tipBursaSelect = document.getElementById("tip_bursa");
+                        data.forEach(bursa => {
+                            const [id, ...denumireParts] = bursa.split(" ");
+                            const denumire = denumireParts.join(" ");
+                            const option = document.createElement("option");
+                            option.value = id;
+                            option.textContent = denumire;
+                            tipBursaSelect.appendChild(option);
+                        });
+                    });
+
+                document.getElementById("tip_bursa").addEventListener("change", function() {
+                    const semestruContainer = document.getElementById("semestru-container");
+                    if (this.value !== "none") {
+                        semestruContainer.style.display = "block";
+                    } else {
+                        semestruContainer.style.display = "none";
+                    }
+                });
+                document.querySelector("form").onsubmit = function(event) {
+                    event.preventDefault();
+
+                    const tipBursaSelect = document.getElementById("tip_bursa");
+                    const tipBursa = tipBursaSelect.value;
+
+                    const formData = new URLSearchParams();
+                    formData.append("nume", document.getElementById("nume").value);
+                    formData.append("prenume", document.getElementById("prenume").value);
+                    formData.append("data_nasterii", document.getElementById("data_nasterii").value);
+                    formData.append("tip_bursa", tipBursa);
+
+                    if (tipBursa !== "none") {
+                        const semestruValue = document.getElementById("semestru").value;
+                        formData.append("semestru", semestruValue);
+                    }
+
+                    const clasaValue = document.getElementById("clasa").value;
+                    formData.append("clasa", clasaValue);
+
+                    fetch('/adaugaElev', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(result => {
+                        alert(result);
+                        window.close();
+                    })
+                    .catch(error => {
+                        console.error('Eroare:', error);
+                    });
+                };
+
+            </script>
+        </body>
+        </html>
+    `);
+};
+
+

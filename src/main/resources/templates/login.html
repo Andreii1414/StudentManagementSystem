@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container" id="container">
+    <div class="form-container sign-up">
+        <form id = "registrationForm">
+            <h1>Register form</h1>
+            <input placeholder='Name' type="text" id="name" name="name" required>
+            <input placeholder='Email' type="email" id="email" name="email" required>
+            <input placeholder='Password' type="password" id="password" name="password" required>
+            <input placeholder='Repeat your password' type="password" id="repeat" name="repeat" required>
+            <div id="errorMessages" style="color:red;"></div>
+            <div>
+                <button type="submit">Register</button>
+                <button type="button" id="btnToggle2" class="toggleButton">
+                    <i class="fa fa-eye fa-eye-slash" id="eyeIcon2"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="form-container sign-in">
+        <form id="loginForm">
+            <h1> Login form</h1>
+            <input placeholder='Email' type="email" id="email2" name="email" required>
+            <input placeholder='Password' type="password" id="password2" name="password" required>
+            <div id="errorMessages2" style="color:red;"></div>
+            <div>
+                <button type="submit">Log in</button>
+                <button type="button" id="btnToggle" class="toggleButton">
+                    <i class="fa fa-eye fa-eye-slash" id="eyeIcon"></i>
+                </button>
+            </div>
+
+        </form>
+    </div>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+                <h1>Welcome!</h1>
+                <p>Already have an account?</p>
+                <button class="hidden" id="login">Log in</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome!</h1>
+                <p>Don't have an account?</p>
+                <button class="hidden" id="register">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/forms.js"></script>
+</body>
+</html>
