@@ -2,11 +2,11 @@
 
 Java Spring Boot + Html + Css + Javascript
 
-Java: [/src/main/java/com/example/demo](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/java/com/example/demo)
-Html: [/src/main/resources/templates](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/resources/templates)
-Css + Js: [/src/main/resources/static](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/resources/static)
-Python: [/pythonScripts](https://github.com/Andreii1414/StudentManagementSystem/tree/main/pythonScripts)
-Schema baza de date: [/database.png](https://github.com/Andreii1414/StudentManagementSystem/blob/main/database.png)
+Java: [/src/main/java/com/example/demo](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/java/com/example/demo) <br />
+Html: [/src/main/resources/templates](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/resources/templates) <br />
+Css + Js: [/src/main/resources/static](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/resources/static) <br />
+Python: [/pythonScripts](https://github.com/Andreii1414/StudentManagementSystem/tree/main/pythonScripts) <br />
+Schema baza de date: [/database.png](https://github.com/Andreii1414/StudentManagementSystem/blob/main/database.png) <br />
 Videoclip de prezentare:
 
 Optiuni:
