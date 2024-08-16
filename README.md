@@ -7,7 +7,7 @@
 * Css + Js: [/src/main/resources/static](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/resources/static) 
 * Python: [/pythonScripts](https://github.com/Andreii1414/StudentManagementSystem/tree/main/pythonScripts) 
 * Schema baza de date: [/database.png](https://github.com/Andreii1414/StudentManagementSystem/blob/main/database.png)
-* Videoclip de prezentare:
+* Videoclip de prezentare: [video](https://www.youtube.com/watch?v=hwvMqzz2Fu4)
 
 ## Optiuni: 
 - Register 
