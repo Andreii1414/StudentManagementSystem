@@ -1,16 +1,16 @@
 # StudentManagementSystem
 
-Java Spring Boot + Html + Css + Javascript
+## Java Spring Boot + Html + Css + Javascript
 
-Java: [/src/main/java/com/example/demo](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/java/com/example/demo) <br />
-Html: [/src/main/resources/templates](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/resources/templates) <br />
-Css + Js: [/src/main/resources/static](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/resources/static) <br />
-Python: [/pythonScripts](https://github.com/Andreii1414/StudentManagementSystem/tree/main/pythonScripts) <br />
-Schema baza de date: [/database.png](https://github.com/Andreii1414/StudentManagementSystem/blob/main/database.png) <br />
-Videoclip de prezentare:
+* Java: [/src/main/java/com/example/demo](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/java/com/example/demo) 
+* Html: [/src/main/resources/templates](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/resources/templates) 
+* Css + Js: [/src/main/resources/static](https://github.com/Andreii1414/StudentManagementSystem/tree/main/src/main/resources/static) 
+* Python: [/pythonScripts](https://github.com/Andreii1414/StudentManagementSystem/tree/main/pythonScripts) 
+* Schema baza de date: [/database.png](https://github.com/Andreii1414/StudentManagementSystem/blob/main/database.png)
+* Videoclip de prezentare:
 
-## Optiuni: <br />
-	- Register <br />
+Optiuni: 
+	- Register 
 	- Login (admin/user) <br />
 	- User panel (top 10 elevi, toti dirigintii, top 5 materii ca nr de absente, elevi cu bursa sociala+merit pe semestrul 2) <br />
 	- Admin panel (adaugare elev, mutare elev la alta clasa, motivare absenta) 
