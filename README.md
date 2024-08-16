@@ -9,11 +9,11 @@
 * Schema baza de date: [/database.png](https://github.com/Andreii1414/StudentManagementSystem/blob/main/database.png)
 * Videoclip de prezentare:
 
-Optiuni: 
-	- Register 
-	- Login (admin/user) <br />
-	- User panel (top 10 elevi, toti dirigintii, top 5 materii ca nr de absente, elevi cu bursa sociala+merit pe semestrul 2) <br />
-	- Admin panel (adaugare elev, mutare elev la alta clasa, motivare absenta) 
+## Optiuni: 
+- Register 
+- Login (admin/user)
+- User panel (top 10 elevi, toti dirigintii, top 5 materii ca nr de absente, elevi cu bursa sociala+merit pe semestrul 2)
+- Admin panel (adaugare elev, mutare elev la alta clasa, motivare absenta) 
 
 Register [link](https://github.com/Andreii1414/StudentManagementSystem/blob/main/src/main/java/com/example/demo/Controllers/RegistrationController.java): <br />
 	- parola => hashed, validari, erori <br />
